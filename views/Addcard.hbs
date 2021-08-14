@@ -1,0 +1,78 @@
+<div class="container">
+  <main>
+  <form class="credit-card" action="/cardsuccess" method="post">
+    <div class="text-center">
+      <h2>Add Card</h2>
+       <br>
+    </div>
+		<h4 class="mb-3">Please fill out your details below</h4>
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="Card Title" class="form-label">Card Title</label>
+              <input type="text" class="form-control cardtitle" name="cardTitle" required>
+            </div>
+			<div class="col-12">
+              <label for="cardname" class="form-label">Card Name</label>
+              <input type="name" class="form-control card-name" name="cardname" required>
+            </div>
+			<div class="col-12">
+              <label for="cardnumber" class="form-label">Card Number</label>
+              <input type="text" class="form-control card-number" name="cardnumber" required>
+            </div>
+             
+			 
+			<div class="col-md-5">
+              <label for="country" class="form-label">Expiration Month</label>
+              <select class="form-select month" name="Month" required>
+                 <option value="">Choose...</option>
+				 <option value="01">January</option>
+                 <option value="02">February</option>
+                 <option value="03">March</option>
+                 <option value="04">April</option>
+                 <option value="05">May</option>
+                 <option value="06">June</option>
+                 <option value="07">July</option>
+                 <option value="08">August</option>
+                 <option value="09">September</option>
+                 <option value="10">October</option>
+                 <option value="11">November</option>
+                 <option value="12">December</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid month.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label year">Expiration Year</label>
+              <select class="form-select" name="Year" required>
+                 <option value="">Choose...</option>
+                 <option value="22">2022</option>
+                 <option value="23">2023</option>
+                 <option value="24">2024</option>
+                 <option value="25">2025</option>
+                 <option value="26">2026</option>
+                 <option value="27">2027</option>
+                 <option value="28">2028</option>
+                 <option value="29">2029</option>
+                 <option value="30">2030</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid year.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+			  <label for="cvv" class="form-label">CVV</label>
+              <input type="Password" class="form-control" maxlength="3" id="cvv" name="cvv" placeholder="xxx" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+            </div>
+        <br> 
+        <button class="w-100 btn btn-primary btn-lg proceed-btn" type="submit">Proceed</button>
+        </form>
+       
+  </main>
+</div>

@@ -1,0 +1,33 @@
+<p>
+   {{#if msg}}
+      <p>{{msg}}</p>
+    {{/if}}
+</p>
+ <form action="/profile" method="post">
+{{!-- 
+  <img src="../images/Picture1.png" alt="Biopay" class="Biopay"> --}}      
+<div class="container">
+  <main>
+  <form action="/profile"  method="post">
+    <div class="text-center">
+      <h2>Log in</h2>
+       <br>
+    </div>
+		<h4 class="mb-3">Please fill out your details below</h4>
+          <div class="row g-3">
+		        <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+			<div class="col-12">
+              <label for="psw" class="form-label">Password</label>
+              <input type="password" class="form-control" name="psw" required>
+            </div>
+            </div>
+        <br> 
+        <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="return Validate()">Sign Up</button>
+        </form><br><br/><br/>
+       <span><a href="/signup">Create an Account</a></span>
+  </main>
+</form>
+

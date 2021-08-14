@@ -1,0 +1,34 @@
+ <button onclick="take_snapshot()">Take Snapshot</button>
+  <div id="camContainer"></div>
+  <div id="picture_from_cam"></div>
+<a href="/profile"><button>Back</button></a>
+  <script src="webcam.min.js"></script>
+  <script src="filesaver.js"></script>
+  <script type="text/javascript">
+    Webcam.attach( '#camContainer' );
+    
+    function take_snapshot() {
+      Webcam.snap( function(img_data_url) {
+        document.getElementById('picture_from_cam').innerHTML = '<img name ="captured_data" src="'+img_data_url+'"/>';
+
+var byteString = atob(img_data_url.split(',')[1]); // convert base64 to raw binary data held in a string
+
+var mimeString = img_data_url.split(',')[0].split(':')[1].split(';')[0]  // separate out the mime component
+
+var ab = new ArrayBuffer(byteString.length);  // write the bytes of the string to an ArrayBuffer
+
+var ia = new Uint8Array(ab); // create a view into the buffer
+
+// set the bytes of the buffer to the correct values
+for (var i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i);
+}
+
+// write the ArrayBuffer to a blob, and you're done
+var blob = new Blob([ab], {type: mimeString});
+console.log(blob);
+saveAs(blob, "imahge.jpeg");
+ } );
+ 
+    }
+  </script>

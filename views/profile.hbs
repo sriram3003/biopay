@@ -1,0 +1,79 @@
+   <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Biopay</a>
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/addcard">Add Card</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/subscription">Manage Subscription</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link active" href="/webcamera">Face biometric addition</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link active" href="/logout">Logout</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+  <br/>
+  <br/>
+
+{{#if msg}}
+    Welcome {{msg}}
+
+    <br/>
+
+  {{/if}}
+
+  {{#if msg1}}
+    Card added successfully
+  {{/if}}
+  <main>
+    <div class="text-center">
+       <br>
+    </div>
+ <div class="bd-example">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+        <th>Card Title</th>
+        <th>Name on Card</th>
+        <th>Card Number</th>
+        <th>Month</th>
+        <th>Year</th>
+        <th>CVV</th>
+        <th>&nbsp;</th>
+          </tr>
+          </thead>
+           <tbody>
+          {{#each tables}}
+              <tr>
+                <td>{{this.cardTitle}}</td>
+
+               <td>{{this.cardName}}</td>
+
+                <td>{{this.cardNumber}}</td>
+           
+                <td>{{this.month}}</td>
+              
+                <td>{{this.year}}</td>
+            
+                <td>{{this.cvv}}</td>
+
+                <td><a href="/delete/{{this.cardID}}">Delete</a></td>
+              </tr>
+          {{/each}}
+             </tbody>
+  
+    </table>
+    </div>
+ 
+        
+ 
+          

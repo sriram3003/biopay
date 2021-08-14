@@ -1,0 +1,30 @@
+<div class="container">
+  <main>
+    <div class="text-center">
+      <h2>Payment form</h2>
+      <p class="lead">Please fill out the payment details below so you can begin to use Biopay</p>
+    </div>
+
+		<h4 class="mb-3">Please select a subscription plan</h4>
+          <div class="row g-3">
+           <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Basic Membership - Monthly subscription of €12.99. Add 1 card to BioPay.</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Standard Membership - Monthly subscription of €14.99. Add up to 2 cards to BioPay.</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">Premium Membership - Monthly subscription of €19.99. Add unlimited cards to BioPay.</label>
+            </div>
+          </div>
+		  
+		  
+        <br> 
+        <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="location.href='file:///C:/Users/User/Desktop/bootstrap-5.0.2-examples/bootstrap-5.0.2-examples/checkout/congrats.html'">Subscribe</button>
+        </form>
+       
+  </main>

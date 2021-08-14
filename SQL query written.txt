@@ -1,0 +1,22 @@
+create table biopayv1.customerdetails (
+CHID int auto_increment,
+CHname varchar(100),
+email  varchar(100),
+dob date not null ,
+pws varchar(100) not null,
+phonenumber bigint not null,
+primary key (CHID)
+);
+
+create table biopayv1.carddetails (
+cardID int auto_increment,
+CHID int not null,
+cardTitle varchar(100) not null,
+cardNumber  varchar(100) not null,
+month varchar(100) not null ,
+year varchar(100) not null,
+cvv smallint not null,
+primary key (cardID),
+foreign key (CHID) 
+references biopayv1.customerdetails(CHID)
+);

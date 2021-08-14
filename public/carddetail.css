@@ -1,0 +1,18 @@
+.container {
+    max-width: 960px;
+  }
+  
+  #camContainer {
+    width: 600px;
+    height: 450px;
+  }
+
+  #picture_from_cam {
+    margin-left: 708px;
+    margin-top: -439px;
+  }
+  #picture_from_cam img {
+    border: solid 1px #000;
+    width: 500px;
+    height: auto;
+  }

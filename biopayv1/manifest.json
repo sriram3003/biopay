@@ -1,0 +1,17 @@
+{
+    "name": "Biopay",
+    "description": "Biopayv1!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting","browserAction"],
+      "action": {
+        "default_icon": "/images/Picture1.png",
+        "icon":"/images/Picture1.png",
+        "default_popup": "popup.html",
+        "js": ["background.js"]
+  }}
+
+  
